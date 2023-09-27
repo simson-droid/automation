@@ -6,7 +6,6 @@ jobs:
     steps:
         - name: Install Chromedriver
           run: |
-            CHROME_VERSION="117"
             CHROMEDRIVER_VERSION="117.0.5938.92"
             curl -o /tmp/chromedriver.zip "https://chromedriver.storage.googleapis.com/${CHROMEDRIVER_VERSION}/chromedriver_linux64.zip"
             unzip /tmp/chromedriver.zip -d /usr/local/bin
