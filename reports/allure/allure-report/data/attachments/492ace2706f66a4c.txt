@@ -1,0 +1,4 @@
+{
+  "script": "return (function () {\n                            window.close();\n                        }).apply(null, arguments)",
+  "args": []
+}
