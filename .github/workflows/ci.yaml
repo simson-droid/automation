@@ -4,8 +4,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-        - name: Check Chromedriver Version
-          run: chromedriver --version
         - name: Checkout
           uses: actions/checkout@v4
         - uses: actions/setup-node@v3
