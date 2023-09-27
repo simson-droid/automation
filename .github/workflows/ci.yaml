@@ -4,12 +4,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-        - name: Install Chromedriver
-          run: |
-            CHROMEDRIVER_VERSION="117.0.2"
-            curl -o /tmp/chromedriver.zip "https://chromedriver.storage.googleapis.com/${CHROMEDRIVER_VERSION}/chromedriver_linux64.zip"
-            unzip /tmp/chromedriver.zip -d /usr/local/bin
-            chmod +x /usr/local/bin/chromedriver
         - name: Check Chromedriver Version
           run: chromedriver --version
         - name: Checkout
