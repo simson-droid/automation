@@ -7,8 +7,8 @@ jobs:
         - name: Install Chromedriver
           run: |
             CHROME_VERSION=$(google-chrome-stable --version | awk '{print $3}' | cut -d '.' -f 1)
-            CHROMEDRIVER_VERSION=$(curl -s "https://chromedriver.storage.googleapis.com/LATEST_RELEASE_${CHROME_VERSION}")
-            curl -o /tmp/chromedriver.zip "https://chromedriver.storage.googleapis.com/${CHROMEDRIVER_VERSION}/chromedriver_linux64.zip"
+            CHROMEDRIVER_VERSION=$(curl -s "https://chromedriver.storage.googleapis.com/LATEST_RELEASE_117.0.5938.92 ")
+            curl -o /tmp/chromedriver.zip "https://chromedriver.storage.googleapis.com/117.0.5938.92/chromedriver_linux64.zip"
             unzip /tmp/chromedriver.zip -d /usr/local/bin
             chmod +x /usr/local/bin/chromedriver
         - name: Checkout
@@ -20,7 +20,7 @@ jobs:
           run: npm install
         - name: Test
           run: npm run wdio
-        - uses: actions/upload-artifact@v1
+        - uses: actions/upload-artifact@v3
           if: failure()
           with:
             name: allureReport
