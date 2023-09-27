@@ -125,7 +125,6 @@ export const config: Options.Testrunner = {
             logFileName: 'wdio-chromedriver.log', // default
             outputDir: 'driver-logs', // overwrites the config.outputDir
             args: ['--silent'],
-            chromedriverCustomPath:"./chromedriver"
         }]
       ],
     //
